@@ -8,7 +8,23 @@
       "description": "Run all jest unit tests",
       "safeForSimultaneousRushProcesses": false,
       "shellCommand": "jest --config ./packages/build-tools/unit.js"
-    }
+    },
+    {
+      "commandKind": "global",
+      "name": "cp-modules",
+      "summary": "copy node_modules to root",
+      "description": "",
+      "safeForSimultaneousRushProcesses": true,
+      "shellCommand": "cp -r ./common/temp/node_modules ./node_modules"
+    },
+    {
+      "commandKind": "global",
+      "name": "del-modules",
+      "summary": "remove the root node_modules copy",
+      "description": "",
+      "safeForSimultaneousRushProcesses": true,
+      "shellCommand": "rm -rf ./node_modules"
+    },
   ],
   "parameters": [
     {
